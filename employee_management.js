@@ -52,8 +52,47 @@ class Manager extends Employee {
     
       }
       getDetails() {
-        console.log(`${this.name} has $${this.salary} salary and works as ${this.position} in this ${this.department} department and has bonus of $$(this.bonus)`);
+        console.log(`${this.name} has $${this.salary} salary and works as ${this.position} in this ${this.department} department and has bonus of $${this.bonus}`);
 
     }
 }
+// Task 5- 
+//Create departments
 
+const humanResource = new Department("Human Resource");
+
+const marketing = new Department("Marketing");
+
+// Create employees
+
+const habil = new Employee("Habil", 80000, "Analyst", "Human Resource");
+
+const sreela = new Employee("Sreela", 75000, "Designer", "Marketing");
+
+const tazrin = new Manager("Tazrin", 120000, "Specialist", "Human Resource", 20000);
+
+const tasfia = new Manager("Diana", 130000, "Marketing Manager", "Marketing", 25000);
+
+
+
+// Add employees to departments
+
+humanResource.addEmployee(habil);
+
+humanResource.addEmployee(tazrin);
+
+marketing.addEmployee(sreela);
+
+marketing.addEmployee(tasfia);
+
+
+
+// Calculate total salary for each department
+
+console.log(`Total salary for Human Resource: $${humanResource.getDepartmentSalary()}`);
+
+console.log(`Total salary with bonuses for Human Resource: $${humanResource.calculateTotalSalaryWithBonus()}`);
+
+console.log(`Total salary for Marketing: $${marketing.getDepartmentSalary()}`);
+
+console.log(`Total salary with bonuses for Marketing: $${marketing.calculateTotalSalaryWithBonus()}`);
