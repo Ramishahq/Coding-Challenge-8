@@ -96,3 +96,9 @@ console.log(`Total salary with bonuses for Human Resource: $${humanResource.calc
 console.log(`Total salary for Marketing: $${marketing.getDepartmentSalary()}`);
 
 console.log(`Total salary with bonuses for Marketing: $${marketing.calculateTotalSalaryWithBonus()}`);
+
+// Outputs
+//Total salary for Human Resource: $200000
+//Total salary with bonuses for Human Resource: $220000
+//Total salary for Marketing: $205000
+//Total salary with bonuses for Marketing: $230000
